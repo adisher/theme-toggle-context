@@ -3,11 +3,10 @@ import MyState from './components/useState';
 import Child from './components/child';
 
 function App() {
-  // const state = useState("adil")
+  const num = 2;
   return (
     <>
-      <MyState/>
-      <Child/>
+      <MyState value = {num}/>
       
     </>
   );
