@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
-import { ContextTheme } from './context';
+import React from 'react';
 
 function MyState() {
-    
-    
+
     return (
         <div>
             <h3>my state</h3>

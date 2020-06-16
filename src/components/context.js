@@ -1,7 +1,6 @@
 import { createContext } from "react"
 
-export const ContextTheme = createContext(
-    {
-        theme: "light",
-        setTheme: () => {},
-    });
+export const ContextTheme = createContext({
+    theme: "light",
+    setTheme: () => {}
+});

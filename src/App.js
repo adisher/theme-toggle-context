@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
-import {ContextTheme} from './components/context'
 import Child from './components/child';
 import MyState from './components/useState';
+import { ContextTheme } from './components/context';
 
 function App() {
-  let [theme, setTheme] = useState(true)
-  function changeTheme() {
+  const [theme, setTheme] = useState(true);
+  function ChangeTheme() {
     setTheme(state => !state)
-}
+  }
+  
   return (
-
     <ContextTheme.Provider value = {
       {
         theme,
-        changeTheme
-      }}>
-      <MyState/>
+        ChangeTheme
+      }
+    }>
       <Child/>
+      <MyState/>
     </ContextTheme.Provider>
   );
 }
