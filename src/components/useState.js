@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import Child from './child';
+import React, { useContext } from 'react';
+import { ContextNum } from './context';
 
-function MyState({value}) {
-    let [state, stateSet] = useState(true)
+
+function MyState() {
+    let {num, numChange} = useContext(ContextNum);
+    
     return (
         <div>
-            <Child value = {value}/>
-            This is {state? "valid" : "invalid"} useState: {value}
-            <button onClick= {() => stateSet(!state)}>Change</button>
+            <h3>{num}</h3>
+            <button onClick = {numChange}>Change</button>
         </div>
     );
 }

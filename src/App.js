@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
 import MyState from './components/useState';
+import {ContextNum} from './components/context'
 import Child from './components/child';
 
 function App() {
-  const num = 2;
+  let [num, setNum] = useState(10);
+  
+  function numChange() {
+    setNum(state => ++state);
+  }
+
   return (
-    <>
-      <MyState value = {num}/>
-      
-    </>
+
+    <ContextNum.Provider value = {
+      {
+        num, 
+        numChange
+      }
+    }>
+      <MyState />
+      <Child/>
+    </ContextNum.Provider>
   );
 }
 
