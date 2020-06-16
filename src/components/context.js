@@ -1,7 +1,7 @@
 import { createContext } from "react"
 
-export const ContextNum = createContext(
+export const ContextTheme = createContext(
     {
-        num: 10,
-        setNum: () => {},
+        theme: "light",
+        setTheme: () => {},
     });

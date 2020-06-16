@@ -1,13 +1,13 @@
-import React, { useContext, useState } from 'react';
-import { ContextNum } from './context';
+import React, { useContext } from 'react';
+import { ContextTheme } from './context';
 
 function Child() {
-    const {num} = useContext(ContextNum);
-    let {temp, setTemp} = useState();
+    const {theme, changeTheme} = useContext(ContextTheme);
     return (
         <div>
-            {console.log(num)}
-            <h3>Child: {num}</h3>
+            {console.log(theme)}
+            <h3>Child: {theme? "light" : "dark"}</h3>
+            <button onClick={changeTheme}>{theme? "dark" : "light"}</button>
         </div>
     );
 }
